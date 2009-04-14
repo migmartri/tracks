@@ -1,5 +1,6 @@
 *~
 *.tmproj
+*.swp
 .dotest
 /.emacs-project
 config/database.yml
