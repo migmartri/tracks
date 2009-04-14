@@ -166,4 +166,11 @@ module ApplicationHelper
     return rt+rp+rts
   end
 
+  def css_standard_for(theme)
+    if theme == "default"
+      return "standard"
+    else
+      "themes/#{theme}/standard"
+    end
+  end
 end

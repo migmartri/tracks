@@ -71,6 +71,8 @@
 	  <%= row_with_text_field("sms_email") %>
 	  <%= table_row("sms_context", false) { select('prefs', 'sms_context_id', current_user.contexts.map{|c| [c.name, c.id]}) } %>
 
+	  <%= table_row("theme", false) { select('prefs', 'theme', Preference.themes) } %>
+
 	    <tr><td><%= submit_tag "Update" %></td>
 	        <td><%= link_to "Cancel", :action => 'index' %></td>
 	    </tr>

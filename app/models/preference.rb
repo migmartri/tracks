@@ -16,6 +16,10 @@ class Preference < ActiveRecord::Base
       6 => "Saturday"}
   end
 
+  def self.themes
+    dirs = ["default"] + (Dir.open("#{RAILS_ROOT}/public/stylesheets/themes").entries - [".", ".."])
+  end
+
   def hide_completed_actions?
     return show_number_completed == 0
   end
