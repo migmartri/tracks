@@ -47,17 +47,36 @@ p {
     line-height: 140%;
 }
 
+
 a, a:link, a:active, a:visited {
+    color: #000;
+    text-decoration: none;
+    padding-left: 1px;
+    padding-right: 1px;
+}
+
+#sidebar a, .data a {
+  border-bottom: 1px dotted #333;
+}
+
+#topbar a, #topbar a:link, #topbar a:active, #topbar a:visited,
+#todo_new_action_container a, #todo_new_action_container a:link, #todo_new_action_container a:active, #todo_new_action_container a:visited {
     color: #f9d64c;
     text-decoration: none;
     padding-left: 1px;
     padding-right: 1px;
 }
 
+#topbar a:hover,
+#todo_new_action_container a:hover,
 a:hover {
     color: #000;
-    background-color: #f9d64c;
+    background-color:#f9d64c;
 } 
+
+#footer a, #footer a:link, #footer a:active, #footer a:visited {
+    color: #000;
+}
 
 h1 {
     font-size: 304%;
@@ -262,7 +281,7 @@ body.preferences div#input_box {
     margin-bottom: 20px;
     clear: both;
     background-color: #000;
-    color: #f9d64c;
+    color: #fff;
     width: 100%;
     z-index:101;
 }
@@ -616,7 +635,7 @@ The colour of the background gets progressively yellower with age */
 /* Shows the number of undone next action */
 .badge {
     color: #000;
-    background: #f9d64c;
+    background: #fff;
     padding: 3px 5px;
     font-size: 12pt;
     margin: 10px 10px 0px 0px;
@@ -792,6 +811,7 @@ form {
     width: 100%;
 }
 
+
 input#go_to_project, input#context_hide {
     width: 5%;
 }
@@ -847,9 +867,10 @@ input#go_to_project, input#context_hide {
 .hide_form {
     text-align:right;
 }
-#todo-form-new-action label, .edit_todo_form label {
+#todo-form-new-action label, .edit_todo_form label, #input_box label {
     display: block;
     padding-bottom: 3px;
+    color: #f9d64c;
 }
 
 form.button-to {
